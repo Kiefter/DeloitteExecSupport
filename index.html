@@ -283,11 +283,6 @@
   }
   a.doc-link:hover { background: var(--dt-mid); }
 
-  .agenda-table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14.5px; }
-  .agenda-table th, .agenda-table td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); }
-  .agenda-table th { background: var(--dt-black); color: #fff; font-weight: 600; }
-  .agenda-table tr:nth-child(even) td { background: var(--surface-alt); }
-
   /* ---------- Chooser matrix ---------- */
   .matrix-wrap { overflow-x: auto; margin: 16px 0 6px; -webkit-overflow-scrolling: touch; }
   .matrix { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 980px; }
@@ -369,7 +364,6 @@
     <button class="tab-btn active" data-tab="intro">Introduction</button>
     <button class="tab-btn" data-tab="prompting">Prompting</button>
     <button class="tab-btn" data-tab="prompts">Prompts</button>
-    <button class="tab-btn" data-tab="agents">Agents 101</button>
     <button class="tab-btn" data-tab="whentouse">When to use what</button>
   </div>
 </nav>
@@ -392,19 +386,7 @@
       <div class="info-card"><h4>Take it home</h4><p>This site is yours. Bookmark it, share it with your peers, and keep experimenting.</p></div>
     </div>
 
-    <h3 class="group"><span class="step-num">2</span> Today's agenda (60 minutes)</h3>
-    <table class="agenda-table">
-      <thead><tr><th>Time</th><th>Segment</th><th>What we'll cover</th></tr></thead>
-      <tbody>
-        <tr><td>5 min</td><td>Introduction</td><td>Why Copilot, and how today works</td></tr>
-        <tr><td>15 min</td><td>Day in the Life</td><td>Live demo of high-impact prompts for your role</td></tr>
-        <tr><td>20 min</td><td>Agents Introduction</td><td>Demo an agent built in Agent Builder, and how it was made</td></tr>
-        <tr><td>10 min</td><td>Agents Workshop</td><td>Build the agent together in Agent Builder</td></tr>
-        <tr><td>10 min</td><td>Q&amp;A</td><td>Your questions</td></tr>
-      </tbody>
-    </table>
-
-    <h3 class="group"><span class="step-num">3</span> How to read these prompts</h3>
+    <h3 class="group"><span class="step-num">2</span> How to read these prompts</h3>
     <div class="tip"><strong>We'll move across your apps.</strong> Each prompt is tagged with where to run it &#8212; Outlook, Word, PowerPoint, Excel, Teams, or the Microsoft 365 Copilot chat &#8212; so you see Copilot everywhere you work. In Word, PowerPoint, and Excel, just look for the <strong>Copilot</strong> button to begin. A couple of EA prompts use the executive's shared mailbox (those are marked). When a prompt shows something in <code>[brackets]</code>, that's a file or meeting to attach &#8212; type <code>/</code> to link it.</div>
     <p style="margin-top:14px;">New to writing prompts? The <strong>Prompting</strong> tab covers how to get great results every time.</p>
 
@@ -516,7 +498,7 @@
           <pre class="prompt-text">Recap this meeting for me: lead with the decisions that were made, then list the action items by owner with due dates, and close with anything we explicitly parked for a future discussion. Keep it concise enough to send to the team.</pre>
         </div>
 
-        <div class="tip"><strong>Your turn:</strong> point these at your real priorities, your real business review, your real meeting. Then see the <strong>Agents 101</strong> tab to package this whole rhythm into a reusable Chief of Staff agent.</div>
+        <div class="tip"><strong>Your turn:</strong> point these at your real priorities, your real business review, your real meeting. You can also package this whole rhythm into a reusable Chief of Staff agent in Agent Builder &#8212; see the <strong>When to use what</strong> tab for how.</div>
       </div>
 
       <div class="subpanel" id="sub-ea">
@@ -589,7 +571,7 @@
           <pre class="prompt-text">Find the most recent files and emails about the Atlas launch and give me a short status update I can share with my executive &#8212; what's on track, what's still pending, and any open decisions.</pre>
         </div>
 
-        <div class="tip"><strong>Your turn:</strong> point these at a real email, a real topic, or a real deck and watch how much time they save. The <strong>Agents 101</strong> tab shows how to turn your favorites into a one-click assistant.</div>
+        <div class="tip"><strong>Your turn:</strong> point these at a real email, a real topic, or a real deck and watch how much time they save. See the <strong>When to use what</strong> tab for how to turn your favorites into a one-click assistant in Agent Builder.</div>
       </div>
 
       <div class="subpanel" id="sub-leaders">
@@ -714,7 +696,7 @@
           <pre class="prompt-text">Catch me up on what I missed in [this channel] over the last day. Pull out the key updates and decisions, any questions directed at me, and anything that still needs a response or an approval, and list them so I can act quickly.</pre>
         </div>
 
-        <div class="tip"><strong>Your turn:</strong> point these at your real portfolio, your real review, and your real numbers. The <strong>Agents 101</strong> tab shows how to turn your favorite into a one-click assistant &#8212; including the <strong>Platform Tech &amp; Roadmap Advisor</strong> we built for this group.</div>
+        <div class="tip"><strong>Your turn:</strong> point these at your real portfolio, your real review, and your real numbers. See the <strong>When to use what</strong> tab for how to turn your favorite into a one-click assistant in Agent Builder.</div>
       </div>
 
       <div class="subpanel" id="sub-finance">
@@ -989,140 +971,6 @@
     </div>
   </section>
 
-  <!-- ================= AGENTS ================= -->
-  <section class="panel" id="agents">
-    <span class="pill">Agents 101</span>
-    <h2 class="section-title">Build your own Copilot agent &#8212; no code required</h2>
-    <p class="lede">An <strong>agent</strong> is a custom version of Copilot you set up once and reuse forever. You give it a name, a job description, and instructions for how it should behave &#8212; and optionally point it at trusted files or sites for knowledge. Agent Builder lets you create one just by describing it in plain language.</p>
-
-    <p class="pill-label">Choose your role</p>
-    <div class="pill-nav">
-      <button class="pill-btn" data-sub="sub-agent-cos">Chief of Staff</button>
-      <button class="pill-btn" data-sub="sub-agent-ea">Executive Admin</button>
-      <button class="pill-btn" data-sub="sub-agent-leaders">Director &amp; MD</button>
-      <button class="pill-btn active" data-sub="sub-agent-it">IT Leader</button>
-      <button class="pill-btn" data-sub="sub-agent-finance">Finance</button>
-      <button class="pill-btn" data-sub="sub-agent-hr">Human Resources</button>
-      <button class="pill-btn" data-sub="sub-agent-sales">Sales &amp; Advisory</button>
-      <button class="pill-btn" data-sub="sub-agent-marketing">Marketing</button>
-      <button class="pill-btn" data-sub="sub-agent-legal">Legal &amp; Compliance</button>
-      <button class="pill-btn" data-sub="sub-agent-ops">Operations</button>
-    </div>
-
-    <h3 class="group"><span class="step-num">1</span> Why build an agent?</h3>
-    <div class="card-grid">
-      <div class="info-card"><h4>Consistency</h4><p>Your best prompt, captured once. Everyone on the team gets the same high-quality help.</p></div>
-      <div class="info-card"><h4>Speed</h4><p>No re-typing long instructions. Open the agent and go.</p></div>
-      <div class="info-card"><h4>Grounded</h4><p>Point it at the right SharePoint sites or files so answers use your team's source of truth.</p></div>
-      <div class="info-card"><h4>Shareable</h4><p>Build it once, then share it with your peers across the leadership office.</p></div>
-    </div>
-
-    <h3 class="group"><span class="step-num">2</span> How to build one in Agent Builder</h3>
-    <ol class="steps">
-      <li><strong>Open Agent Builder.</strong> In Microsoft 365 Copilot, choose <strong>Create agent</strong> (New agent) to launch the builder.</li>
-      <li><strong>Describe it in plain language.</strong> Paste a description like the starter prompts below. Copilot fills in the name, description, and instructions for you.</li>
-      <li><strong>Refine conversationally.</strong> Tweak the tone, add a rule, change the name &#8212; just keep typing what you want.</li>
-      <li><strong>Add the knowledge &#8212; this is the key step.</strong> The agent only knows what you give it here. Point it at the SharePoint library (or OneDrive files) that holds your meeting notes, agendas, pre-reads, and the objective scorecard &#8212; you can also add specific Teams chats or emails. Add these a day or two ahead so they finish indexing.</li>
-      <li><strong>Add starter prompts.</strong> Give users one-click example prompts so they know what to ask.</li>
-      <li><strong>Test it.</strong> Try it in the preview pane on the right and adjust until it feels right.</li>
-      <li><strong>Create &amp; share.</strong> Save the agent and share it with the colleagues who'd benefit.</li>
-    </ol>
-
-    <div class="tip"><strong>What an agent can &#8212; and can't &#8212; reach.</strong> An agent answers only from the <em>knowledge sources you add</em> &#8212; SharePoint and OneDrive files and sites, specific Teams chats, specific emails, approved websites, and connectors. It does <strong>not</strong> automatically read your calendar or your whole mailbox, so it won't see past meeting notes unless those notes live in a knowledge source you've attached. For a brief that pulls live from your calendar and recent email instead, use the Copilot <em>"Prepare for your next meeting"</em> prompt on the Prompts tab (Executive Admin).</div>
-
-    <h3 class="group"><span class="step-num">3</span> Official Microsoft documentation</h3>
-    <p class="scene" style="margin-left:0; font-style:normal;">Step-by-step guidance for building agents in Agent Builder:</p>
-    <a class="doc-link" href="https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-build-agents" target="_blank" rel="noopener">&#55357;&#56536; Build agents with Agent Builder &#8212; Microsoft Learn</a>
-    <p style="font-size:13px; color:var(--muted-text); margin:4px 0 0;">learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/agent-builder-build-agents</p>
-
-    <h3 class="group"><span class="step-num">4</span> The starter prompt for your role</h3>
-    <p class="lede">Each of these agents does one job well &#8212; the Chief of Staff planner builds your meeting from the documents in its knowledge, the Executive Voice Writer drafts in your executive's voice, the Leader's Strategy &amp; Market Brief connects what's happening outside to your strategy inside, the Platform Tech &amp; Roadmap Advisor answers from your technology roadmap, architecture standards, and company objectives, and the new role-based agents below cover Finance, HR, Sales &amp; Advisory, Marketing, Legal &amp; Compliance, and Operations. Your role above selects the matching starter agent &#8212; paste its description into Agent Builder's "describe your agent" box, then make it your own. (The voice profile shown for the Executive Admin role is a playful sample &#8212; swap in your executive's real one.)</p>
-
-    <div class="subpanel" id="sub-agent-cos">
-      <div class="prompt-card">
-        <div class="prompt-head"><span class="prompt-label">Agent for Chiefs of Staff &#8212; meeting planner</span><button class="copy-btn">Copy</button></div>
-        <pre class="prompt-text">Create an agent called Chief of Staff Meeting Planner that helps a chief of staff plan and prepare large-scale leadership meetings such as a Business Review or Business Operations Review, a performance review, a leader onboarding, or Leadership Meetings Week Prep. Use the documents in your knowledge as your source of truth &#8212; our leadership meeting notes, prior agendas, pre-reads, and the objective scorecard / tracker. When I name an upcoming meeting, find the matching materials in your knowledge and build a complete plan: a timed agenda, the decisions that need to be made, the pre-reads and an owner for each topic, the open action items carried over from the most recent notes for that meeting, and the latest status from the scorecard with any objective that slipped to red called out. Think strategically, organize everything under clear headings, separate facts from recommendations, and flag the risks and decisions that need leadership attention. If you can't find the relevant document in your knowledge, tell me what's missing instead of guessing. Give it a starter prompt that reads: Plan my upcoming meeting:</pre>
-      </div>
-      <div class="tip"><strong>Grounding tip:</strong> This agent is only as good as its <em>knowledge</em> &#8212; drop the meeting notes, agendas, pre-reads, and the objective scorecard into one SharePoint library and attach it a day ahead so it indexes.</div>
-    </div>
-
-    <div class="subpanel" id="sub-agent-ea">
-      <div class="prompt-card">
-        <div class="prompt-head"><span class="prompt-label">Agent for Executive Admins &#8212; executive voice</span><button class="copy-btn">Copy</button></div>
-        <pre class="prompt-text">Create an agent called Executive Voice Writer that drafts emails and messages in the voice of the executive I support. Use the voice profile below as the rules for how the executive writes &#8212; match the tone, sentence rhythm, level of formality, greetings and sign-offs, and signature phrases, and steer clear of anything under "What to avoid." When I describe what needs to be said, or paste a message to reply to, produce a ready-to-send draft in this voice, then offer one shorter and one warmer alternative. Never invent facts; if a detail is missing, leave a clearly marked placeholder, and remind me the executive should review before anything is sent. Give it a starter prompt that reads: Draft this in my executive's voice:
-
-Voice profile &#8212; Tone: warm, measured, and precise; confident without overstatement; treats every reader as a capable colleague. Formality: professional and courteous, with enough directness that the ask is never in doubt. Structure: leads with the point, then the reasoning, then the request; short paragraphs, no rambling. Greetings and sign-offs: opens with "Hi [name]," or "Team,"; signs off with "Best," or "Thank you,". Signature phrases: "Here's where I land&#8230;", "Two things&#8230;", "Happy to discuss." Humor: light and rare; never at anyone's expense. What to avoid: jargon and buzzwords, hedging language, terse one-word replies, and anything that reads as impatient.
-
-Sample sentences &#8212; "Here's where I land: we proceed with option B, and we revisit the timeline at the end of the quarter." / "Two things before Thursday &#8212; the updated numbers, and a short view on the risk we discussed." / "Thank you for turning this around quickly; it made a real difference to the conversation." / "I'd like us to be deliberate here rather than fast &#8212; happy to discuss if that changes the plan."</pre>
-      </div>
-      <div class="tip"><strong>Grounding tip:</strong> This agent carries its voice in its <em>instructions</em> (the profile in the prompt). Optionally attach a short "Voice of my Executive" guide plus a couple of sample messages as knowledge for extra grounding.</div>
-    </div>
-
-    <div class="subpanel" id="sub-agent-leaders">
-      <div class="prompt-card">
-        <div class="prompt-head"><span class="prompt-label">Agent for Directors &amp; MDs &#8212; strategy &amp; market brief</span><button class="copy-btn">Copy</button></div>
-        <pre class="prompt-text">Create an agent called Leader's Strategy &amp; Market Brief that helps a director or managing director stay ahead of what's happening inside and outside the business. Ground it in its knowledge: our strategy and priorities documents from the leadership SharePoint site, and a short list of trusted public sources &#8212; our industry's leading publications, key competitors' newsrooms, and the relevant regulators &#8212; with website search turned on. When I ask about a topic, a competitor, or a market development, give me a concise briefing: what's happening, why it matters to our strategy, and one or two implications or actions for my team, and cite the sources you used. When I ask what our position is on something, answer from our strategy documents and tell me plainly if the documents don't cover it. Keep it crisp and executive-ready, organize under clear headings, separate fact from opinion, and never invent a source or a statistic. Give it a starter prompt that reads: Brief me on:</pre>
-      </div>
-      <div class="tip"><strong>Grounding tip:</strong> This agent pulls from two knowledge types at once &#8212; your strategy documents in <em>SharePoint</em> plus a few trusted public <em>website URLs</em> with web search turned on &#8212; so it connects the outside world to your priorities.</div>
-    </div>
-
-    <div class="subpanel active" id="sub-agent-it">
-      <div class="prompt-card">
-        <div class="prompt-head"><span class="prompt-label">Agent for Technology &amp; IT Leaders &#8212; platform tech &amp; roadmap advisor</span><button class="copy-btn">Copy</button></div>
-        <pre class="prompt-text">Create an agent called Platform Tech &amp; Roadmap Advisor that helps a technology leader stay on top of our technology direction. Ground it in its knowledge: our technology roadmap, our platform and service briefs, our architecture and security standards, and our company objectives &#8212; all from our SharePoint and OneDrive documents. When I ask about a platform, a technology, or an initiative, brief me from those documents: where it sits on the roadmap, its key technical and control requirements, how it maps to our company objectives, and the open questions or dependencies to watch. When I describe a proposed initiative or decision, pressure-test it against the roadmap and objectives &#8212; what fits, what conflicts, and the trade-offs &#8212; and give me a recommendation with the reasoning. Answer only from the documents, separate fact from recommendation, never invent a specification or a date, and if the documents don't cover something, tell me plainly what's missing instead of guessing. Keep it crisp and executive-ready under clear headings. Give it a starter prompt that reads: Brief me on our roadmap for:</pre>
-      </div>
-      <div class="tip"><strong>Grounding tip:</strong> This agent grounds entirely in documents you already have &#8212; point it at your technology roadmap, platform briefs, architecture and security standards, and company objectives in SharePoint or OneDrive, and attach them a day ahead so they finish indexing before you demo.</div>
-    </div>
-
-    <div class="subpanel" id="sub-agent-finance">
-      <div class="prompt-card">
-        <div class="prompt-head"><span class="prompt-label">Agent for Finance &#8212; variance &amp; reporting advisor</span><button class="copy-btn">Copy</button></div>
-        <pre class="prompt-text">Create an agent called Finance Variance &amp; Reporting Advisor that helps a finance team explain results faster. Ground it in its knowledge: our chart of accounts reference, our standard variance-explanation templates, and our prior quarters' management commentary from SharePoint or OneDrive. When I describe which numbers moved, help me draft a plain-English explanation consistent with how we've explained similar variances before, and flag if a movement looks unusual compared to historical patterns in the knowledge. Answer only from the documents, separate fact from recommendation, never invent a number, and tell me plainly if the knowledge doesn't cover something. Give it a starter prompt that reads: Help me explain this variance:</pre>
-      </div>
-      <div class="tip"><strong>Grounding tip:</strong> Attach your chart of accounts, variance templates, and a few past quarters' commentary so the agent learns your house style for explaining numbers &#8212; never let it touch live, unreconciled figures without a human check.</div>
-    </div>
-
-    <div class="subpanel" id="sub-agent-hr">
-      <div class="prompt-card">
-        <div class="prompt-head"><span class="prompt-label">Agent for Human Resources &#8212; policy &amp; process guide</span><button class="copy-btn">Copy</button></div>
-        <pre class="prompt-text">Create an agent called HR Policy &amp; Process Guide that answers employee and manager questions about our HR policies and processes. Ground it in its knowledge: our HR policy handbook, benefits guides, and leave and time-off policies from our SharePoint library. When someone asks a policy question, answer only from those documents in plain language, note any regional or level-based differences, and tell me plainly if the documents don't fully cover the question so it can be escalated to an HR partner. Never speculate about individual employee situations or protected characteristics. Give it a starter prompt that reads: What's our policy on:</pre>
-      </div>
-      <div class="tip"><strong>Grounding tip:</strong> Ground this agent only in published, approved policy documents &#8212; never in individual case files or personnel records &#8212; and route anything person-specific to an HR partner.</div>
-    </div>
-
-    <div class="subpanel" id="sub-agent-sales">
-      <div class="prompt-card">
-        <div class="prompt-head"><span class="prompt-label">Agent for Sales &amp; Advisory &#8212; client relationship briefer</span><button class="copy-btn">Copy</button></div>
-        <pre class="prompt-text">Create an agent called Client Relationship Briefer that helps a client service partner or engagement lead prepare for client conversations. Ground it in its knowledge: our approved client-facing materials, service line one-pagers, and standard engagement letters from SharePoint. When I name a client or a topic, summarize the relevant approved materials I should reference, remind me of standard scope and independence considerations that apply, and never draft anything that could be read as a firm commitment or a scope change without flagging it for engagement leadership review. Give it a starter prompt that reads: Help me prepare to discuss:</pre>
-      </div>
-      <div class="tip"><strong>Grounding tip:</strong> Only ground this agent in approved, firm-cleared materials &#8212; and always route anything it drafts for a client through your normal engagement quality and independence review before it's sent.</div>
-    </div>
-
-    <div class="subpanel" id="sub-agent-marketing">
-      <div class="prompt-card">
-        <div class="prompt-head"><span class="prompt-label">Agent for Marketing &#8212; brand &amp; campaign assistant</span><button class="copy-btn">Copy</button></div>
-        <pre class="prompt-text">Create an agent called Brand &amp; Campaign Assistant that helps draft on-brand marketing content. Ground it in its knowledge: our brand voice and style guide, approved messaging pillars, and past campaign briefs from SharePoint or OneDrive. When I describe a campaign or a piece of content, draft it consistent with our brand voice and messaging pillars, flag anything that deviates from our style guide, and always note that external-facing content needs compliance and brand review before publishing. Give it a starter prompt that reads: Draft content for:</pre>
-      </div>
-      <div class="tip"><strong>Grounding tip:</strong> Attach your brand and style guide plus a handful of best-in-class past campaigns so tone and terminology stay consistent &#8212; treat its output as a strong first draft, not final copy.</div>
-    </div>
-
-    <div class="subpanel" id="sub-agent-legal">
-      <div class="prompt-card">
-        <div class="prompt-head"><span class="prompt-label">Agent for Legal &amp; Compliance &#8212; playbook &amp; policy advisor</span><button class="copy-btn">Copy</button></div>
-        <pre class="prompt-text">Create an agent called Legal Playbook &amp; Policy Advisor that helps legal and compliance teams answer questions consistently. Ground it in its knowledge: our contract playbooks, standard clause library, and compliance policy documents from SharePoint. When I ask about a clause, a policy, or a proposed deviation, answer only from those documents, cite which playbook or policy each point comes from, flag anything that needs escalation to a licensed attorney, and never state a legal conclusion as certain. Give it a starter prompt that reads: What does our playbook say about:</pre>
-      </div>
-      <div class="tip"><strong>Grounding tip:</strong> Ground this agent only in current, approved playbooks and policies &#8212; review and refresh the knowledge whenever the underlying documents change, and always have qualified counsel review anything before it's relied upon.</div>
-    </div>
-
-    <div class="subpanel" id="sub-agent-ops">
-      <div class="prompt-card">
-        <div class="prompt-head"><span class="prompt-label">Agent for Operations &#8212; process &amp; exception advisor</span><button class="copy-btn">Copy</button></div>
-        <pre class="prompt-text">Create an agent called Operations Process &amp; Exception Advisor that helps an operations team resolve exceptions consistently. Ground it in its knowledge: our standard operating procedures, exception-handling playbooks, and escalation matrix from SharePoint. When I describe an exception or an issue, tell me which procedure applies, the standard resolution steps, and who to escalate to if it falls outside normal parameters. Answer only from the documents, and if the situation isn't covered, tell me plainly instead of guessing. Give it a starter prompt that reads: How should I handle this exception:</pre>
-      </div>
-      <div class="tip"><strong>Grounding tip:</strong> Keep the SOP and escalation-matrix knowledge current &#8212; an outdated procedure is worse than none, so review this agent's knowledge sources on the same cadence you review the underlying playbooks.</div>
-    </div>
-  </section>
-
   <!-- ================= WHEN TO USE WHAT ================= -->
   <section class="panel" id="whentouse">
     <span class="pill">When to use what</span>
@@ -1285,7 +1133,7 @@ Sample sentences &#8212; "Here's where I land: we proceed with option B, and we 
       <div class="prompt-head"><span class="prompt-label">Agent Builder</span><button class="copy-btn">Copy</button></div>
       <pre class="prompt-text">Create an agent called Control Review Assistant that answers questions about our control standards and our review process. Ground it in its knowledge: our control standards, procedure documents, and the review checklist from our SharePoint library. When I describe a change or a new initiative, tell me which controls apply, what evidence the reviewers will expect, and what's most likely to get challenged. Answer only from the documents, separate fact from recommendation, and if the documents don't cover something, tell me plainly what's missing instead of guessing. Give it a starter prompt that reads: Which controls apply to:</pre>
     </div>
-    <div class="tip"><strong>Full walkthrough on the Agents 101 tab.</strong> It covers how to build one step by step in Agent Builder, what an agent can and can't reach, and a ready-made starter agent for your role.</div>
+    <div class="tip"><strong>How to build one.</strong> In Microsoft 365 Copilot, choose <em>Create agent</em> (New agent), describe it in plain language, then add the knowledge sources it should answer from &#8212; SharePoint or OneDrive files, specific Teams chats, or emails. Add a starter prompt, test it in the preview pane, then create and share it with your team.</div>
 
     <h3 class="group" style="font-size:16px; margin-top:24px;">Use Researcher or Analyst when the thinking is the hard part</h3>
     <p class="scene" style="margin-left:0;">Both are ready-to-use specialists with their own reasoning models. Call them by typing <code>@</code> in Copilot chat &#8212; they'll take longer than a normal chat answer, because they're doing considerably more.</p>
